@@ -1,59 +1,106 @@
-.hero{
-    height: 100vb;
+.hero {
+    min-height: 100vh;
     background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
 }
-.hero-left{
+
+.hero-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding-left: 180px;
+    padding-left: 50px;
     line-height: 1.1;
 }
-.hero-left h2{
+
+.hero-left h2 {
     color: #090909;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 600;
 }
-.hero-left p{
+
+.hero-left p {
     color: #171717;
-    font-size: 100px;
+    font-size: 40px;
     font-weight: 700;
 }
-.hero-hand-icon{
+
+.hero-hand-icon {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
-.hero-hand-icon img{
-    width: 105px;
+
+.hero-hand-icon img {
+    width: 40px;
 }
-.hero-latest-button{
+
+.hero-latest-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    width: 310px;
-    height: 70px;
+    gap: 12px;
+    width: 220px;
+    height: 50px;
     border-radius: 75px;
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: #ff4141;
     color: white;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
 }
-.hero-latest-button:hover{
+
+.hero-latest-button:hover {
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.321);
     transform: scale(1.01);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
-.hero-right{
+
+.hero-right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+}
 
+.hero-right img {
+    width: 280px;
+    min-width: 250px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .hero-left {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .hero-left p {
+        font-size: 32px;
+    }
+
+    .hero-left h2 {
+        font-size: 18px;
+    }
+
+    .hero-latest-button {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .hero-right img {
+        width: 220px;
+    }
 }

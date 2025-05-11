@@ -1,24 +1,49 @@
-.relatedproducts{
+.relatedproducts {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-bottom: 100px;
 }
-.relatedproducts h1{
+
+.relatedproducts h1 {
     color: #171717;
-    font-size: 50px;
-    font-weight: 600s;
+    font-size: 40px;
+    font-weight: 600; /* Fixed the typo here */
 }
-.relatedproducts hr{
+
+.relatedproducts hr {
     width: 200px;
     height: 6px;
     border-radius: 10px;
     background-color: #252525;
 }
-.relatedproducts-item{
+
+.relatedproducts-item {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .relatedproducts-item {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .relatedproducts-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .relatedproducts-item {
+        grid-template-columns: 1fr; /* 1 column for mobile devices */
+    }
+    .relatedproducts h1 {
+        font-size: 28px; /* Adjust font size for small screens */
+    }
 }

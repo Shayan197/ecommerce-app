@@ -1,10 +1,15 @@
-.descriptionbox{
-    margin: 120px 170px;
+.descriptionbox {
+    margin: 60px 24px;
+    padding: 0 10px; /* Added padding for small screens */
 }
-.descriptionbox-nevigator{
+
+.descriptionbox-nevigator {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
-.descriptionbox-nav-box{
+
+.descriptionbox-nav-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,22 +19,51 @@
     height: 70px;
     border: 1px solid #d0d0d0;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.descriptionbox-nav-box:hover{
+
+.descriptionbox-nav-box:hover, .descriptionbox-nav-box:focus {
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.321);
-    transform: scale(1.01);
-    transition: all 0.5s ease;
+    transform: scale(1.05);
 }
-.descriptionbox-nav-box:focus{
-    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.321);
-    transform: scale(1.01);
-    transition: all 0.5s ease;
-}
-.descriptionbox-description{
+
+.descriptionbox-description {
     display: flex;
     flex-direction: column;
     gap: 25px;
     border: 1px solid #d0d0d0;
     padding: 48px;
     padding-bottom: 70px;
+    background-color: #fafafa; /* Added background color for a cleaner look */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .descriptionbox-nevigator {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .descriptionbox-nav-box {
+        width: 100%;
+        height: 50px;
+    }
+
+    .descriptionbox-description {
+        padding: 30px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .descriptionbox-nav-box {
+        font-size: 14px;
+        height: 45px;
+    }
+
+    .descriptionbox-description {
+        padding: 20px;
+        font-size: 14px; /* Adjust font size for small screens */
+    }
 }
