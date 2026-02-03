@@ -1,14 +1,19 @@
 /* ---------------- Big screens (default) ---------------- */
 .productdisplay {
   display: flex;
-  margin: 0 24px;
+  margin: 0 clamp(16px, 4vw, 56px); /* responsive margin */
   padding: 0 clamp(16px, 4vw, 56px);
+  box-sizing: border-box; /* ensure padding included */
+  gap: 20px; /* space between left and right */
+  flex-wrap: wrap; /* prevent overflow */
 }
 
 .productdisplay-left {
   display: flex;
   gap: 17px;
   align-items: flex-start;
+  flex: 1 1 400px; /* allow shrinking on smaller screens */
+  min-width: 220px; /* prevent too small thumbnails */
 }
 
 .productdisplay-img-list {
@@ -25,17 +30,21 @@
 }
 
 .productdisplay-main-img {
-  height: 700px;
-  width: 586px;
+  width: 100%;
+  max-width: 586px; /* control size */
+  height: 700px; /* responsive */
   object-fit: cover;
 }
 
 .productdisplay-right {
-  margin: 0 70px;
+  flex: 1 1 300px; /* allow shrinking */
+  max-width: 500px; /* prevent right content from overflowing */
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .productdisplay-right h1 {
@@ -121,11 +130,12 @@
 }
 
 /* ---------------- Medium screens (tablet) ---------------- */
-@media (max-width: 1128px) {
+@media (max-width: 1024px) {
   .productdisplay {
     flex-direction: column;
     margin: 0 20px;
-    align-items: center; /* center everything */
+    align-items: center;
+    gap: 20px;
   }
 
   .productdisplay-left {
@@ -137,7 +147,7 @@
   .productdisplay-img-list {
     flex-direction: row;
     gap: 12px;
-    overflow-x: auto; /* horizontal scroll for images if needed */
+    overflow-x: auto;
     padding-bottom: 8px;
   }
 
@@ -152,9 +162,9 @@
   }
 
   .productdisplay-right {
-    margin: 0;
     align-items: center;
     text-align: center;
+    max-width: 100%; /* prevent overflow */
   }
 
   .productdisplay-right h1 {
