@@ -1,52 +1,62 @@
 .popular {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  /* Ensures content is centered */
-    gap: 10px;
-    width: 100%;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    text-align: center; /* Centers the text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensures content is centered */
+  gap: 10px;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center; /* Centers the text */
 }
 
 .popular h1 {
-    color: #171717;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
+  color: #171717;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .popular hr {
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
-    border: none;
-    margin-top: 10px;
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+  border: none;
+  margin-top: 10px;
 }
 
 .popular-item {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: center;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .popular {
+    padding: 20px 24px; /* Adjust padding for mobile */
+  }
+  .popular-item {
+    justify-items: center; /* center items in each column */
+    gap: 20px; /* optional: adjust gap for smaller screens */
+  }
+}
 /* For mobile view */
 @media (max-width: 600px) {
-    .popular {
-        padding: 20px 10px;  /* Adjust padding for mobile */
-    }
+  .popular {
+    padding: 20px 10px; /* Adjust padding for mobile */
+  }
 
-    .popular h1 {
-        font-size: 30px;  /* Adjust heading font size for smaller screens */
-    }
+  .popular h1 {
+    font-size: 30px; /* Adjust heading font size for smaller screens */
+  }
 
-    .popular-item {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));  /* Adjust grid for mobile */
-    }
+  .popular-item {
+    grid-template-columns: 1fr; /* force 1 column */
+    justify-items: center; /* center the item */
+  }
 }

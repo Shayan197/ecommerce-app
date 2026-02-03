@@ -1,142 +1,142 @@
 /* Navbar base */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 30px;
-    box-shadow: 0 1px 3px -2px black;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  box-shadow: 0 1px 3px -2px black;
+  position: relative;
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-logo p {
-    color: #171717;
-    font-size: 32px;
-    font-weight: 600;
+  color: #171717;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 /* Hamburger icon */
 .hamburger {
-    display: none;
-    font-size: 26px;
-    cursor: pointer;
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    font-size: 16px;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .nav-menu li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
 }
 
 .nav-menu hr {
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background-color: #ff4141;
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #ff4141;
 }
 
 .nav-login-cart {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .nav-login-cart button {
-    width: 120px;
-    height: 40px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: white;
-    cursor: pointer;
+  width: 120px;
+  height: 40px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
 }
 
 .nav-login-cart img {
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
 }
 
 .nav-cart-count {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    margin-left: -35px;
-    margin-top: -25px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  margin-left: -35px;
+  margin-top: -25px;
 }
 
 /* Visibility classes */
 .nav-login-cart.desktop {
-    display: flex;
+  display: flex;
 }
 
 .nav-login-cart.mobile {
-    display: none;
+  display: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    .nav-menu {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: white;
-        padding: 20px 0;
-        gap: 25px;
-        display: none;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 0;
+    gap: 25px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
-    .nav-menu.open {
-        display: flex;
-    }
+  .nav-menu.open {
+    display: flex;
+  }
 
-    .nav-login-cart.desktop {
-        display: none;
-    }
+  .nav-login-cart.desktop {
+    display: none;
+  }
 
-    .nav-login-cart.mobile {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+  .nav-login-cart.mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
 
-    .nav-login-cart.mobile button {
-        width: 90px;
-        height: 34px;
-        font-size: 13px;
-    }
+  .nav-login-cart.mobile button {
+    width: 90px;
+    height: 34px;
+    font-size: 13px;
+  }
 }

@@ -1,48 +1,49 @@
 .breadcurm {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #5e5e5e;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 60px 24px;
-    text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5e5e5e;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 60px 24px;
+  text-transform: capitalize;
+  padding: 0 clamp(16px, 4vw, 56px);
 }
 
 .breadcurm img {
-    width: 16px; /* Adjust the size of the arrow icon */
-    height: 16px; /* Maintain the aspect ratio */
-    margin: 0 6px; /* Add spacing around the icon */
+  width: 16px; /* Adjust the size of the arrow icon */
+  height: 16px; /* Maintain the aspect ratio */
+  margin: 0 6px; /* Add spacing around the icon */
 }
 
 /* Hover effect for breadcrumb items */
 .breadcurm span:hover {
-    color: #007bff;
-    cursor: pointer;
+  color: #007bff;
+  cursor: pointer;
 }
 
 /* Mobile View - Make the font size smaller for better readability */
 @media (max-width: 768px) {
-    .breadcurm {
-        font-size: 14px; /* Adjust font size for mobile */
-        margin: 40px 16px; /* Less margin on smaller screens */
-    }
+  .breadcurm {
+    font-size: 14px; /* Adjust font size for mobile */
+    margin: 40px 16px; /* Less margin on smaller screens */
+  }
 
-    .breadcurm img {
-        width: 12px; /* Adjust arrow size for mobile */
-        height: 12px;
-    }
+  .breadcurm img {
+    width: 12px; /* Adjust arrow size for mobile */
+    height: 12px;
+  }
 }
 
 /* For very small screens (max-width: 480px) */
 @media (max-width: 480px) {
-    .breadcurm {
-        font-size: 12px; /* Further reduce font size */
-        margin: 20px 12px; /* Further reduce margin */
-    }
+  .breadcurm {
+    font-size: 12px; /* Further reduce font size */
+    margin: 20px 12px; /* Further reduce margin */
+  }
 
-    .breadcurm img {
-        width: 10px; /* Adjust arrow size for very small screens */
-        height: 10px;
-    }
+  .breadcurm img {
+    width: 10px; /* Adjust arrow size for very small screens */
+    height: 10px;
+  }
 }
